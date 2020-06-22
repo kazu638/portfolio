@@ -1,0 +1,100 @@
+.top-title{
+  text-align: center;
+  height: 500px;
+  background-color: orange;
+  h1 {
+    font-family: "plustt";
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    background-color: blue;
+  }
+}
+.top-study-contents{
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: pink;
+}
+
+.study-content{
+  border: solid 3px black;
+  border-radius: 25%;
+  height: 400px;
+  margin: 30px 15px 30px;
+  position: relative;
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+  }
+}
+
+.top-portfolio-contents{
+  padding: 40px 0;
+  background-color: green;
+  h2{
+    text-align: center;
+  }
+  .portfolio-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    background-color: white;
+  }
+  .portfolil-description{
+    width: 100%;
+    padding: 20px;
+    h3{
+      padding-bottom: 30px;
+      border-bottom: solid 4px gray;
+    }
+    .portfolio-function,.portofolio-learn{
+      margin-top: 40px;
+      position: relative;
+      padding: 1em;
+      border: solid 2px #ffcb8a;
+      border-radius: 3px 0 3px 0;
+      &:before,&:after{
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 14px;
+        border: solid 2px #ffcb8a;
+        border-radius: 50%;
+      }
+      &:after{
+        top: -12px;
+        left: -12px;
+      }
+      &:before{
+        bottom: -12px;
+        right: -12px;
+      }
+    }
+  }
+}
+
+.sns-group{
+  display: flex;
+  // justify-content: space-around;
+  background-color: orange;
+  .qiita, .github, .twitter{
+    // padding: 20px;
+    width: 33%;
+    h3{
+      text-align: center;
+    }
+  }
+  .github{
+    border: solid 3px gray;
+    border-width: 0 1px 0;
+    // padding: 0 25px;
+  }
+}
+
