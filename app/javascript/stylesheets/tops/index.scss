@@ -1,15 +1,14 @@
 .top-title{
   text-align: center;
   height: 500px;
-  background-color: orange;
   h1 {
-    font-family: "plustt";
+    font-family: "Nico Moji";
+    font-size: 5rem;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    background-color: blue;
   }
 }
 .top-study-contents{
@@ -17,7 +16,7 @@
   width: 90%;
   margin: 0 auto;
   padding: 40px;
-  background-color: pink;
+  // background-color: pink;
 }
 
 .study-content{
@@ -37,7 +36,7 @@
 
 .top-portfolio-contents{
   padding: 40px 0;
-  background-color: green;
+  // background-color: green;
   h2{
     text-align: center;
   }
@@ -45,7 +44,7 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 30px;
-    background-color: white;
+    // background-color: white;
   }
   .portfolil-description{
     width: 100%;
@@ -82,10 +81,8 @@
 
 .sns-group{
   display: flex;
-  // justify-content: space-around;
-  background-color: orange;
+  // background-color: orange;
   .qiita, .github, .twitter{
-    // padding: 20px;
     width: 33%;
     h3{
       text-align: center;
@@ -94,7 +91,6 @@
   .github{
     border: solid 3px gray;
     border-width: 0 1px 0;
-    // padding: 0 25px;
   }
 }
 

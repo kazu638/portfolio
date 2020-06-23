@@ -11,6 +11,7 @@ require("jquery")
 import "bootstrap"
 import "../stylesheets/application"
 import "./tops"
+import "./side.js"
 
 
 

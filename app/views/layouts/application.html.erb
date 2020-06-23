@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -14,8 +15,14 @@
   </head>
 
   <body>
-    <div class="site-box">
-      <%= yield %>
+    <%# <%= render %>
+    <div class="site-wrapper">
+      <div class="side-box"></div>
+      <div class="site-box">
+        <%= yield %>
+      </div>
+      <div class="side-box"></div>
     </div>
+    <%# <%= render %>
   </body>
 </html>
