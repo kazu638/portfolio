@@ -4,20 +4,24 @@
 
 <div class="top-study-contents">
   <h2>学習記録</h2>
-  <%= link_to "詳細", "#" %>
+  <%= link_to "詳細", show_studytimes_path %>
   <div class="study-group">
     <div class="study-content">
       <div>
         <p>合計</p>
-        <p><strong>500</strong>時間</p>
-        <p>継続<strong>100</strong>日</p>
+        <p><strong>
+          <%= calc_ms_to_time_string(studytime_to_ms_all(@studytime_all_records)) %>
+          </strong></p>
+        <p>継続<strong><%= @duration %></strong>日</p>
       </div>
     </div>
     <div class="study-content">
       <div>
-        <p>合計</p>
-        <p><strong>500</strong>時間</p>
-        <p>継続<strong>100</strong>日</p>
+        <p>平均</p>
+        <p>１日</p>
+        <p><%= calc_ms_to_time_string( studytime_to_ms_all(@studytime_all_records) / @duration ) %></p>
+        <p>１週間</p>
+        <p><%= calc_ms_to_time_string( studytime_to_ms_all(@studytime_all_records) / @duration * 7 ) %></p>
       </div>
     </div>
     <div class="study-content">

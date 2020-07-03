@@ -1,0 +1,37 @@
+<p><%= notice %></p>
+<p><%= alert %></p>
+
+
+
+<%= form_with(model: @studytime) do |f| %>
+  <%= f.text_field :title%>
+  <%= f.date_field :day %>
+  <%= f.datetime_field :start_time %>
+  <%= f.datetime_field :end_time %>
+  <%= f.submit %>
+<% end %>
+
+
+<h3>過去7日間の学習記録</h3>
+<%= link_to "詳細はこちら", show_studytimes_path %>
+
+<% day_onetime_ago = 0 %>
+<% study_time_onetime_ago = 0 %>
+
+
+<% @studytimes.each_with_index do |s, index| %>
+  <div><%= s.title %></div>
+  <div><%= s.day.to_s(:stamp) %> <%= calc_ms_to_time_string(studytime_to_ms_one(s.end_time, s.start_time)) %></div>
+  <div><%= s.start_time %></div>
+  <div><%= s.end_time %></div>
+  <div>-----------------</div>
+  <% unless index == 0 %>
+    <% if day_onetime_ago == s.day %>
+      <% sum = study_time_onetime_ago + studytime_to_ms_one(s.end_time, s.start_time) %>
+      <h4 class="day-todal"><%= "#{s.day} 合計#{calc_ms_to_time_string(sum)}" %></h4>
+    <div>-----------------</div>
+    <% end %>
+  <% end %>
+  <% day_onetime_ago = s.day %>
+  <% study_time_onetime_ago = studytime_to_ms_one(s.end_time, s.start_time) %>
+<% end %>

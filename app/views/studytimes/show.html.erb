@@ -1,0 +1,40 @@
+<h1>学習累計時間</h1>
+<%= calc_ms_to_time_string(studytime_to_ms_all(@studytime_all_records)) %>
+<p>継続日数</p>
+<p><%= @duration %>日 (<%= @first_starttime[:day].to_s(:stamp) %>から)</p>
+
+<h2>平均</h2>
+<p>日</p>
+<%= calc_ms_to_time_string( studytime_to_ms_all(@studytime_all_records) / @duration ) %>
+<p>週</p>
+<%= calc_ms_to_time_string( studytime_to_ms_all(@studytime_all_records) / @duration * 7 ) %>
+
+<h2>割合</h2>
+
+<p>
+1位
+<%= show_parsent_title( culc_parsent(@studytime_all_records) )[0] %>:
+<%= show_parsent_number( culc_parsent(@studytime_all_records) )[0] %>%
+</p>
+<p>
+2位
+<%= show_parsent_title( culc_parsent(@studytime_all_records) )[1] %>:
+<%= show_parsent_number( culc_parsent(@studytime_all_records) )[1] %>%
+</p>
+<p>
+3位
+<%= show_parsent_title( culc_parsent(@studytime_all_records) )[2] %>:
+<%= show_parsent_number( culc_parsent(@studytime_all_records) )[2] %>%
+</p>
+<p>
+4位
+<%= show_parsent_title( culc_parsent(@studytime_all_records) )[3] %>:
+<%= show_parsent_number( culc_parsent(@studytime_all_records) )[3] %>%
+</p>
+<p>
+5位
+<%= show_parsent_title( culc_parsent(@studytime_all_records) )[4] %>:
+<%= show_parsent_number( culc_parsent(@studytime_all_records) )[4] %>%
+</p>
+
+<h2>グラフ</h2>
