@@ -1,0 +1,23 @@
+header{
+  background-color: pink;
+}
+
+.header-wrapper{
+  width: 1000px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .header-logo{
+    margin-right: auto;
+    font-family: "Nico Moji";
+    font-size: 2rem;
+    a:hover,a:active{
+      text-decoration: none;
+    }
+  }
+  .header-nav{
+    padding-right: 30px;
+  }
+}

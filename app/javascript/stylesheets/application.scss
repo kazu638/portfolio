@@ -17,9 +17,11 @@
 @import "~bootstrap/scss/bootstrap";
 @import "tops";
 @import "side";
+@import "_header";
+// @import "studytimes";
 
 body{
-  background-color: skyblue;
+  background-color: white;
 }
 
 .site-wrapper{
@@ -30,7 +32,9 @@ body{
   width: 1000px;
   margin: 0 auto;
   // background-color:#353436;
-  color: #009bc6;
+  color: black;
 }
 
-
+.day-total{
+  font-size: 2rem;
+}
